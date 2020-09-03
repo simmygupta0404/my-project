@@ -1,0 +1,163 @@
+@mixin padd($top, $right, $bottom, $left) {
+  padding-top: $top;
+  padding-right: $right;
+  padding-bottom: $bottom;
+  padding-left: $left;
+}
+
+@mixin marg($top, $right, $bottom, $left) {
+  margin-top: $top;
+  margin-right: $right;
+  margin-bottom: $bottom;
+  margin-left: $left;
+}
+
+@mixin fontStyle($size: false, $color: false, $weight: false) {
+  @if $size {
+    font-size: $size;
+  }
+  @if $color {
+    color: $color;
+  }
+  @if $weight {
+    font-weight: $weight;
+  }
+}
+
+
+
+
+
+
+.App {
+  &-header {
+    background-color: #1F253F;
+    height: 33px;
+    padding: 20px;
+    color: white;
+    &-item{
+      width: 9%;
+      display: flex;
+      justify-content: space-around;
+    }
+    &-logo {
+      height: 42px;
+    }
+    .App-title {
+      align-items: center;
+      &-one{
+        @include fontStyle(14px, false, normal)
+      }
+      &-two{
+        @include fontStyle(10px, green, normal)
+      }
+    }
+  }
+  &-heading-wrapper{
+    display: flex;
+    justify-content: space-between;
+    .App-heading{
+      @include padd(40px, 0, 40px, 80px );
+    @include fontStyle(33px, #1F253F, bold)
+    }
+    .App-calender{
+      @include padd(60px, 140px, 0, 0);
+      @include fontStyle(18px, #1F253F, bold)
+    }
+    
+  }
+  &-dashboards{
+    display: flex;
+    @include marg(0, 40px, 40px, 90px);
+    border-bottom: 1px solid #ebebeb;
+
+    &-upcoming{
+      @include padd(0, 0, 12px, 0);
+      margin-right: 25px;
+      cursor: pointer;
+    }
+    &-live{
+      @include padd(0, 0, 12px, 0);
+      margin-right: 25px;
+      cursor: pointer;
+    }
+    &-past{
+      @include padd(0, 0, 12px, 0);
+      cursor: pointer;
+    }
+    .selected-dashboard{
+      color: green;
+      border-bottom: 2px solid green;
+    }
+  }
+  &-content{
+    @include marg(0, 40px, 40px, 80px);
+  }
+
+
+
+
+
+  .campaign-wrapper{
+    .campaign{
+      display: flex;
+      &-img{
+        padding-right: 10px;
+      }
+      &-region{
+        @include fontStyle(12px, #B2B7C7, 300);
+        font-style: italic;
+
+      }
+    }
+  }
+
+  .date{
+    display: flex;
+    &-data{
+      padding-right: 10px;
+    }
+    &-desc{
+      @include fontStyle(12px, #7788A3, 300);
+      font-style: italic;
+
+    }
+  }
+
+  .view{
+    display: flex;
+    &-img{
+      padding-right: 10px;
+      height: 20px !important;
+      width: 20px !important;
+    }
+    &-data{
+      display: flex;
+      align-items: center;
+      @include fontStyle(12px, false, 300)
+    }
+  }
+
+  .report{
+    display: flex;
+    .view{
+      display: flex;
+      padding-right: 65px;
+      &-img{
+        padding-right: 6px;
+        height: 15px !important;
+        width: 15px !important;
+      }
+      &-data{
+        display: flex;
+        align-items: center;
+        @include fontStyle(12px, false, 300)
+      }
+    }
+  }
+  
+}
+
+
+
+

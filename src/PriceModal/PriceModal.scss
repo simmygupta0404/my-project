@@ -1,0 +1,195 @@
+$Black: #000;
+$White: #fff;
+$Blue: #00b9f5;
+$DBlue: #012b72;
+$Orange: #ffa400;
+$borderCol: #ebebeb;
+$DBlack: #182233;
+$LGrey: #999;
+$TextCol: #222;
+$DGrey: #444;
+$LBlack: #333;
+$greyBG: #fafcfb;
+$insuText: #f05a22;
+$GreyBorder: #e6ebf3;
+$LBlue: #deeaee;
+
+
+$Green: #00C673;
+$Yellow: #FF9E00;
+$Red: #FF4B55;
+$subTextCol: #536E92;
+$SectionBG: #f6f8fc;
+
+.clear {
+  clear: both;
+}
+@mixin fontStyle($size: false, $color: false, $weight: false) {
+  @if $size {
+    font-size: $size;
+  }
+  @if $color {
+    color: $color;
+  }
+  @if $weight {
+    font-weight: $weight;
+  }
+}
+@mixin position($position, $top, $right, $bottom, $left) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin widthHeight($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+
+@mixin padd($top, $right, $bottom, $left) {
+  padding-top: $top;
+  padding-right: $right;
+  padding-bottom: $bottom;
+  padding-left: $left;
+}
+
+@mixin marg($top, $right, $bottom, $left) {
+  margin-top: $top;
+  margin-right: $right;
+  margin-bottom: $bottom;
+  margin-left: $left;
+}
+
+
+@mixin opacity($pixels) {
+  opacity: $pixels;
+}
+
+@mixin padd($pixels) {
+  padding: $pixels;
+}
+
+@mixin marg($pixels) {
+  margin: $pixels;
+}
+
+@mixin pos($type) {
+  position: $type;
+}
+
+@mixin top($value) {
+  top: $value;
+}
+
+@mixin bottom($value) {
+  bottom: $value;
+}
+
+@mixin left($value) {
+  left: $value;
+}
+
+@mixin right($value) {
+  right: $value;
+}
+@mixin bg-opacity($color, $opacity) {
+  background: rgba($color, $opacity);
+}
+
+.ReactModalPortalMiddle__V2 {
+  position: relative;
+  z-index: 4;
+}
+.ReactModal__Body--open__V2,
+.ReactModal__Html--open__V2 {
+  overflow: hidden;
+}
+.ReactModal__Overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(34, 34, 34, 0.5);
+  overflow: auto;
+}
+.ReactModal__Content {
+  background: $White;
+  margin: 40px auto;
+  max-width:fit-content;
+  border-radius: 0;
+  outline: none;
+  width: 700px;
+  &--sm{
+    width: 450px;
+  }
+}
+.ReactModal__Overlay__V2 {
+  @include bg-opacity($Black, 0.6);
+  overflow: hidden;
+}
+.Content__V2 {
+  &--center {
+      border-radius: 4px;
+      @include position(absolute, 50%, false, false, 50%);
+      transform: translate(-50%, -50%);
+      &--dimension {
+          max-width: 300px;
+      }
+  }
+}
+.ReactModal__Body--open,
+.ReactModal__Html--open {
+  overflow: hidden;
+}
+.modal {
+  &__body {
+    @include padd(20px);
+    overflow-y: auto;
+    max-height: 500px;
+    .campaign{
+      display: flex;
+      .in-center{
+        padding-top: 15%;
+      }
+      &-img{
+        padding-right: 10px;
+      }
+      &-region{
+        @include fontStyle(12px, #B2B7C7, 300);
+        font-style: italic;
+      }
+    }
+    .pricing{
+      @include fontStyle(22px, false, bold);
+      @include padd(30px 0 25px 0)
+    }
+    .pricing-data{
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 25px;
+      &-key{
+        @include fontStyle(false, #7788A3, 300)
+      }
+      &-value{
+        @include fontStyle(false, #556789, bold)
+      }
+    }
+    .close-modal{
+      text-align: center;
+      &-button{
+        @include padd(14px 23px);
+        background: none;
+        cursor: pointer;
+        border: 2px solid;
+        &:hover {
+          background: #7788A3;
+        }
+      }
+      
+    }
+  }
+}
