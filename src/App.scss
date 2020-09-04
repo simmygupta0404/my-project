@@ -31,10 +31,14 @@
 
 .App {
   &-header {
+    @media screen and (max-width: 480px) {
+        width: 185%;
+    }
     background-color: #1F253F;
     height: 33px;
     padding: 20px;
     color: white;
+    width: auto;;
     &-item{
       width: 9%;
       display: flex;
@@ -57,7 +61,7 @@
     display: flex;
     justify-content: space-between;
     .App-heading{
-      @include padd(40px, 0, 40px, 80px );
+      @include padd(40px, 0, 40px, 6% );
     @include fontStyle(33px, #1F253F, bold)
     }
     .App-calender{
@@ -67,8 +71,11 @@
     
   }
   &-dashboards{
+    @media screen and (max-width: 480px) {
+		  width: 185%;
+	  }
     display: flex;
-    @include marg(0, 40px, 40px, 90px);
+    @include marg(0, 40px, 40px, 6%);
     border-bottom: 1px solid #ebebeb;
 
     &-upcoming{
@@ -91,7 +98,7 @@
     }
   }
   &-content{
-    @include marg(0, 40px, 40px, 80px);
+    @include marg(0, 40px, 40px, 6%);
   }
 
 

@@ -306,6 +306,9 @@ $SectionBG: #f6f8fc;
 
 
 .tableWall {
+	@media screen and (max-width: 480px) {
+		  width: 185%;
+	  }
 	@extend .fullWidth;
 	.Table {
 		display: flex;
@@ -321,6 +324,7 @@ $SectionBG: #f6f8fc;
             display: none;
         }
 		.TableHeader {
+			
 			background: $SectionBG;
 			display: flex;
 			flex-flow: row nowrap;
@@ -374,7 +378,6 @@ $SectionBG: #f6f8fc;
 		.TableRowItem {
             cursor: pointer;
 			@extend .disFlex;
-			word-break: break-word;
 			@include padd(12px 8px);
 			flex: 1;
 			// min-width: 145px;
