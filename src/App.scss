@@ -58,6 +58,9 @@
     }
   }
   &-heading-wrapper{
+    @media screen and (max-width: 480px) {
+      width: 200%;
+  }
     display: flex;
     justify-content: space-between;
     .App-heading{
