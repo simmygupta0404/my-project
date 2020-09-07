@@ -18,7 +18,7 @@ export const tableCofig = {
     "data": [
         {
             "key": 0,
-            "date": "2015-03-25",
+            "date": "2020-09-08",
             "campaign": "Auto Chess",
             "region": "US",
             "view": "View Pricing",
@@ -34,7 +34,7 @@ export const tableCofig = {
         },
         {
             "key": 1,
-            "date": "2015-03-25",
+            "date": "2020-09-07",
             "campaign": "PUBG MOBILE",
             "region": "US",
             "price": {
@@ -50,7 +50,7 @@ export const tableCofig = {
         },
         {
             "key": 2,
-            "date": "2015-03-25",
+            "date": "2020-09-07",
             "campaign": "Flow Free",
             "region": "US",
             "view": "View Pricing",
@@ -66,7 +66,7 @@ export const tableCofig = {
         },
         {
             "key": 3,
-            "date": "2015-03-25",
+            "date": "2020-09-06",
             "campaign": "Garena Free Fire",
             "region": "US",
             "view": "View Pricing",
@@ -82,7 +82,7 @@ export const tableCofig = {
         },
         {
             "key": 4,
-            "date": "2015-03-25",
+            "date": "2020-09-08",
             "campaign": "MORTAL KOMBAT",
             "region": "US",
             "view": "View Pricing",
