@@ -7,6 +7,7 @@ import { vehicleImageUploadHeader, tableCofig } from './AppConfig';
 import PriceModal from './PriceModal/PriceModal';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import { format } from 'date-fns';
 
 class App extends Component {
 
@@ -36,10 +37,10 @@ class App extends Component {
     let lTableConfig = [];
     let uTableConfig = [];
     tableCofig.data.forEach((data, index) => {
-      if (new Date(data.date) > new Date()) {
+      if (format(new Date(data.date), "yyyy-MM-dd") > format(new Date(), "yyyy-MM-dd")) {
         uTableConfig.push(data);
       }
-      else if (new Date(data.date) < new Date()) {
+      else if (format(new Date(data.date), "yyyy-MM-dd") < format(new Date(), "yyyy-MM-dd")) {
         pTableCofig.push(data);
       }
       else {
