@@ -153,8 +153,9 @@ export const vehicleImageUploadHeader = [
         label: "Date",
         name: "date",
         renderCallback: (rowData) => {
-            let date = format(new Date(rowData.date), DATE_FORMAT_v2);
-            const today = new Date();
+            let date = format(new Date(rowData.date), "yyyy-MM-dd");
+            let date1 = format(new Date(), "yyyy-MM-dd");
+            let today = new Date(date1);
             const date2 = new Date(date);
             const diffTime = today < date2 ? Math.abs(date2 - today) : Math.abs(today - date2);
             const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
