@@ -50,7 +50,7 @@ export const tableCofig = {
         },
         {
             "key": 2,
-            "date": "2020-09-07",
+            "date": "2021-09-07",
             "campaign": "Flow Free",
             "region": "US",
             "view": "View Pricing",
@@ -66,7 +66,7 @@ export const tableCofig = {
         },
         {
             "key": 3,
-            "date": "2020-09-06",
+            "date": "2020-9-23",
             "campaign": "Garena Free Fire",
             "region": "US",
             "view": "View Pricing",
@@ -98,7 +98,7 @@ export const tableCofig = {
         },
         {
             "key": 5,
-            "date": "2020-9-3",
+            "date": "2020-9-23",
             "campaign": "Summoners War",
             "region": "US",
             "view": "View Pricing",
@@ -114,7 +114,7 @@ export const tableCofig = {
         },
         {
             "key": 6,
-            "date": "2021-03-25",
+            "date": "2020-9-23",
             "campaign": "Need For Speed No Limit",
             "region": "US",
             "view": "View Pricing",
